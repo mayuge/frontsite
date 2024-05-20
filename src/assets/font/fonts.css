@@ -1,0 +1,21 @@
+/* fonts.css */
+@font-face{
+  font-family:'ikamodoki';
+  src:url('src/assets/font/ikamodoki1_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'frisk';
+  src: url('src/assets/font/barbatri.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Orbitron-m';
+  src: url('src/assets/font/Orbitron-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('src/assets/font/BebasNeue-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'kakutto';
+  src: url('src/assets/font/851Gkktt_005.ttf') format('truetype');
+}

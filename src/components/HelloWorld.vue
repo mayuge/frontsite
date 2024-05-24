@@ -11,9 +11,15 @@
             <button class="fvr-button" @click="changeFlavor('#FCC012')"style="background-color:#FCC012"></button>
             <button class="fvr-button" @click="changeFlavor('#00108c')"style="background-color:#00108c"></button>
         </div>
-        <div class="card-label":style="{ color: flavorColor }">Skills</div>
-        <div class= skill-box>
-          
+        <div class="card-label":style="{ color: flavorColor }">About Me</div>
+        <div class= face-box style="color:#333333">
+          <div style="display:flex">
+            <img src="../assets/face.png" style="width:100px;height:100px;margin-right:30px">
+            <div class="face-label">大室慶太
+              <div class="face-intro">通称：ムロケイタ</div>
+            </div>
+          </div>
+          <div class="face-intro">22歳会社員。「挑戦×プロダクトデザイン」をテーマにこのサイトを作成。挑戦にはリスクがつきもの。容量、用法を守って摂取していきたい。</div>
         </div>
       </div>
     </div>
@@ -50,40 +56,62 @@
   height:100vh;
 }
 
-.top-container {
+@media(min-width:1300px){
+  .top-container {
   margin: 0;
   padding: 0;
   display: flex;
   width: 100%;
+  }
+}
+@media(max-width:1300px){
+  .top-container {
+  margin: 0;
+  padding: 0;
+/*  display: flex;*/
+  width: 100%;
+  }
 }
 
-
 .sub-container {
-  width: 100%;
+  width: 90%;
   height: 100%;
+  margin-top:50px;
   padding-left:5%;
 }
 .palette-box {
-  padding-top:30px;
+
   width: 95%;
   height: 120px;
   border-radius: 15px;
+  padding:30px 10px 0px 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
   background-image:url('src/assets/leather.png');
   box-shadow:  2px 2px 5px #bebebe,
              -2px -2px 2px #eeeeee;
 }
-.skill-box {
+.face-box {
   width: 95%;
-  height: 200px;
+  height: 215px;
   border-radius: 15px;
+  padding:15px 10px 15px 10px;
   background-image:url('src/assets/leather.png');
   box-shadow:  2px 2px 5px #bebebe,
              -2px -2px 2px #eeeeee;
 }
+.face-intro{
+  margin-top:15px;
+  font-family:'revenge';
+  font-size:22px;
+}
+.face-label{
+  font-family:'kakutto';
+  font-size:45px;
+  margin-top:15px;
+  margin-bottom:5px;
+} 
 .card-label{
   font-family:'kakutto';
   font-size:30px;
@@ -93,9 +121,31 @@
 .fvr-button{
   width:80px;
   height:80px;
-  border-radius:80px;
+  border-radius:50%;
   border: 5px #555555;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+}
+@media(max-width:450px){
+  .fvr-button{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border: 5px #555555;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+  }
+  .palette-box {
+  padding-top:20px;
+  width: 95%;
+  height: 80px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  background-image:url('src/assets/leather.png');
+  box-shadow:  2px 2px 5px #bebebe,
+             -2px -2px 2px #eeeeee;
+  }
 }
 .middle-container{
   width:95%;
@@ -104,8 +154,9 @@
 }
 
 .product-box{
-  width: 100%;
+  width: 97.5%;
   height: 500px;
+  padding:15px 0px 15px 15px;
   border-radius: 15px;
   background-image:url('src/assets/leather.png');
   box-shadow:  2px 2px 5px #bebebe,

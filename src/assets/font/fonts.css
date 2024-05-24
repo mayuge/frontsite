@@ -19,3 +19,8 @@
   font-family: 'kakutto';
   src: url('src/assets/font/851Gkktt_005.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'revenge';
+  src: url('CP_Revenge.ttf') format('truetype');
+}
+

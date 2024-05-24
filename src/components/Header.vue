@@ -19,5 +19,6 @@
   background-color: #00108c;
   padding-top:10px;
   padding-left:40px;
+  margin-bottom:-1px;
 }
 </style>

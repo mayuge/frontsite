@@ -150,11 +150,11 @@
 .middle-container{
   width:95%;
   height:100%;
-  padding-left:2.5%;
+  padding-left:5%;
 }
 
 .product-box{
-  width: 97.5%;
+  width: 95%;
   height: 500px;
   padding:15px 0px 15px 15px;
   border-radius: 15px;
@@ -162,4 +162,5 @@
   box-shadow:  2px 2px 5px #bebebe,
              -2px -2px 2px #eeeeee;
 }
+
 </style>

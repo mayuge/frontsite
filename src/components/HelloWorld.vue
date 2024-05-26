@@ -6,10 +6,10 @@
       <div class="sub-container">
         <div class="card-label":style="{ color: flavorColor }">FlavorPalette: {{flavorColor}}</div>
         <div class=palette-box>
-            <button class="fvr-button" @click="changeFlavor('#cc0081')" style="background-color:#cc0081"></button>
-            <button class="fvr-button" @click="changeFlavor('#05993A')"style="background-color:#05993A"></button>
-            <button class="fvr-button" @click="changeFlavor('#FCC012')"style="background-color:#FCC012"></button>
-            <button class="fvr-button" @click="changeFlavor('#00108c')"style="background-color:#00108c"></button>
+            <button class="fvr-button" @click="changeFlavor('#cc0081','#ffccec')" style="background-color:#cc0081"></button>
+            <button class="fvr-button" @click="changeFlavor('#05993A','#e7feee')"style="background-color:#05993A"></button>
+            <button class="fvr-button" @click="changeFlavor('#FCC012','#fef2cd')"style="background-color:#FCC012"></button>
+            <button class="fvr-button" @click="changeFlavor('#00108c','#e6e6e6')"style="background-color:#00108c"></button>
         </div>
         <div class="card-label":style="{ color: flavorColor }">About Me</div>
         <div class= face-box style="color:#333333">
@@ -39,10 +39,10 @@
   const store = useStore()
   let flavorColor = ref('#00108c')
 
-  const changeFlavor = (color:string) =>{
+  const changeFlavor = (color:string,tabletcolor:string) =>{
     //alert(color)
     flavorColor.value = color
-    store.changeColor(color)
+    store.changeColor(color,tabletcolor)
   }
 </script>
 

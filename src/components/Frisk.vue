@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="tablet" :style="store.tablet">
-        	<img class="smile" src="../assets/smile.svg">
+        	<img v-if="store.smile" class="smile" src="../assets/smile.svg">
         </div>
       </div>
 </template>

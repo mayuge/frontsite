@@ -14,8 +14,10 @@
                 {{store.color}}
               </div>
             </div>
-            <div class="tablet" :style="{ transform: `translate(${store.moveX}px, ${store.moveY}px)`, transition: store.tabletTime+ 's', opacity: store.opacity }"></div>
           </div>
+        </div>
+        <div class="tablet" :style="store.tablet">
+        	<img v-if="store.smile" class="smile" src="../assets/smile.svg">
         </div>
       </div>
 </template>
@@ -24,13 +26,40 @@
   const store = useStore()
 </script>
 <style scoped>
+.smile{
+	width:45px;
+	height:45px;
+	opacity:0.2;
+}
+
 .tablet{
 	width:45px;
 	height:45px;
 	border-radius: 50%;
-	background-color:#ffffff;
-	opacity: 1;
+	background-image:url('src/assets/noise.png');
+
+	color: hsl(0, 0%, 70%) !important;
+	background-color: 	hsl(0, 0%, 90%);
+
+	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	-moz-box-shadow: 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+	box-shadow:		 	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+
+	position:absolute ;
+	bottom: 0px;
+	right:100px;
+	opacity: 0;
+	border-top: 		1px solid rgba(255,255,255,0.8);
+	border-bottom: 		1px solid rgba(0,0,0,0.1);
+
 	z-index: -1;
+
 }
 
 @media (max-width:549.98px){
@@ -43,13 +72,13 @@
 	  border-radius: 10px;
 	  border: 1px solid;
 	  border-color: #999bb0;
-	  border-bottom: solid 8px #e4e7ed;
-	  border-right: solid 5px #e4e7ed;
-	  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+	  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.4);
+	  z-index:1;
 	}
 
 	.frisk-inedge {
 	  text-align: center;
+	  background-color:#ffffff;
 	  width: 95%;
 	  height: 180px;
 	  margin-top: 10px;
@@ -140,6 +169,7 @@
 
 	.frisk-inedge {
 	  text-align: center;
+	  background-color:#ffffff;
 	  width: 480px;
 	  height: 230px;
 	  margin-top: 10px;
@@ -230,6 +260,7 @@
 
 	.frisk-inedge {
 	  text-align: center;
+	  background-color:#ffffff;
 	  width: 660px;
 	  height: 320px;
 	  margin-top: 10px;
@@ -301,5 +332,6 @@
 	  font-size: 26px;
 	}	
 }
+
 
 </style>

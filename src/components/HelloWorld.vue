@@ -23,25 +23,22 @@
         </div>
       </div>
     </div>
-    <div class="middle-container">
-      <div class="card-label":style="{ color: flavorColor }">Products</div>
-      <div class="product-box">
-        
-      </div>
-    </div>
+    <MiddleContainer/>
   </div>
 </template>
 
 <script setup lang="ts">
   import Frisk from '../components/Frisk.vue'
+  import MiddleContainer from '../components/MiddleContainer.vue'
   import { ref } from 'vue'
   import { useStore } from '../stores/store.ts'
   const store = useStore()
   let flavorColor = ref('#00108c')
-
+  let tabletColor = ref('#e6e6e6')
   const changeFlavor = (color:string,tabletcolor:string) =>{
     //alert(color)
     flavorColor.value = color
+    tabletColor.value = tabletcolor
     store.changeColor(color,tabletcolor)
   }
 </script>
@@ -49,25 +46,26 @@
 <style scoped>
 @import 'src/assets/font/fonts.css';
 
+*{
+  margin:0;
+  padding:0;
+}
 .big-container{
-  margin: 0;
-  padding: 0;
+
   width: 100%;
   height:100vh;
 }
 
 @media(min-width:1300px){
   .top-container {
-  margin: 0;
-  padding: 0;
+
   display: flex;
   width: 100%;
   }
 }
 @media(max-width:1300px){
   .top-container {
-  margin: 0;
-  padding: 0;
+
 /*  display: flex;*/
   width: 100%;
   }
@@ -80,7 +78,6 @@
   padding-left:5%;
 }
 .palette-box {
-
   width: 95%;
   height: 120px;
   border-radius: 15px;
@@ -114,6 +111,7 @@
 } 
 .card-label{
   font-family:'kakutto';
+  width:50%;
   font-size:30px;
   margin-top:15px;
   margin-bottom:5px;
@@ -133,7 +131,7 @@
   border: 5px #555555;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
   }
-  .palette-box {
+.palette-box {
   padding-top:20px;
   width: 95%;
   height: 80px;
@@ -146,21 +144,6 @@
   box-shadow:  2px 2px 5px #bebebe,
              -2px -2px 2px #eeeeee;
   }
-}
-.middle-container{
-  width:95%;
-  height:100%;
-  padding-left:5%;
-}
-
-.product-box{
-  width: 95%;
-  height: 500px;
-  padding:15px 0px 15px 15px;
-  border-radius: 15px;
-  background-image:url('src/assets/leather.png');
-  box-shadow:  2px 2px 5px #bebebe,
-             -2px -2px 2px #eeeeee;
 }
 
 </style>

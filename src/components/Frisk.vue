@@ -51,9 +51,6 @@
 						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
 						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
 
-
-
-
 	position:absolute ;
 	bottom: 0px;
 	right:100px;

@@ -22,7 +22,7 @@
       </div>
 </template>
 <script setup lang="ts">
-  import { useStore } from '../stores/store.ts'
+  import { useStore } from '../stores/store'
   const store = useStore()
 </script>
 <style scoped>
@@ -36,7 +36,7 @@
 	width:45px;
 	height:45px;
 	border-radius: 50%;
-	background-image:url('src/assets/noise.png');
+	background-image:url('@/assets/noise.png');
 
 	color: hsl(0, 0%, 70%) !important;
 	background-color: 	hsl(0, 0%, 90%);

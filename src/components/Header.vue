@@ -4,11 +4,11 @@
   </path></svg>
 </template>
 <script setup lang="ts">
-  import { useStore } from '../stores/store.ts'
+  import { useStore } from '../stores/store'
   const store = useStore()
 </script>
 <style scoped>
-@import 'src/assets/font/fonts.css';
+@import '@/assets/font/fonts.css';
 .header-nav {
   font-family: 'ikamodoki';
   font-size: 45px;

@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <MiddleContainer/>
+    <!-- <MiddleContainer/> -->
   </div>
 </template>
 
@@ -51,9 +51,7 @@
   padding:0;
 }
 .big-container{
-
   width: 100%;
-  height:100vh;
 }
 
 @media(min-width:1300px){
@@ -101,7 +99,7 @@
 .face-intro{
   margin-top:15px;
   font-family:'revenge';
-  font-size:22px;
+  font-size:21px;
 }
 .face-label{
   font-family:'kakutto';

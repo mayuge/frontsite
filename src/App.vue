@@ -1,12 +1,14 @@
 <script setup lang="ts">
   import HelloWorld from './components/HelloWorld.vue'
   import Header from './components/Header.vue'
+  import Footer from './components/Footer.vue'
   import { useStore } from './stores/store.ts'
   const store = useStore()
 </script>
 <template>
   <Header/>
   <HelloWorld/>
+  <Footer/>
 </template>
 <style> 
 body{

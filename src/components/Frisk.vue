@@ -53,7 +53,7 @@
 
 	position:absolute ;
 	bottom: 0px;
-	right:100px;
+	right:80px;
 	opacity: 0;
 	border-top: 		1px solid rgba(255,255,255,0.8);
 	border-bottom: 		1px solid rgba(0,0,0,0.1);
@@ -80,9 +80,9 @@
 	  text-align: center;
 	  background-color:#ffffff;
 	  width: 95%;
-	  height: 180px;
-	  margin-top: 10px;
-	  margin-left: 10px;
+	  height: 183px;
+	  margin-top: 8px;
+	  margin-left: 8px;
 	  margin-right: 10px;
 	  border: 1px solid;
 	  border-color: #999bb0;
@@ -125,7 +125,7 @@
 
 	.skybule-bar {
 	  width: 60%;
-	  height: 20px;
+	  height: 18px;
 	  padding-top:5px;
 	  background-color: #00B1EB;
 	  margin-left: 5%;
@@ -135,9 +135,9 @@
 
 	.red-bar {
 	  font-family: BebasNeue;
-	  padding-top:5px;
-	  width: 30%;
-	  height: 20px;
+	  padding-top:8px;
+	  width: 25%;
+	  height: 23px;
 	  background-color: #E40714;
 	  transform: skewX(15deg);
 	}
@@ -319,7 +319,7 @@
 	  font-family: BebasNeue;
 	  padding-top:5px;
 	  width: 180px;
-	  height: 45px;
+	  height: 40px;
 	  background-color: #E40714;
 	  transform: skewX(15deg);
 	}

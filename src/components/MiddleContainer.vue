@@ -37,10 +37,9 @@
 </template>
 
 <script setup lang="ts">
-  import { useStore } from '../stores/store.ts'
+  import { useStore } from '../stores/store'
   const store = useStore()
 </script>
-
 <style scoped>
 .middle-container {
   width: 100%;
@@ -51,9 +50,8 @@
 
 .product-box {
   width: calc(100% - 30px);
-  height: 1000px;
   padding: 20px 15px 15px 15px;
-  background-image: url('src/assets/leather.png');
+  background-image: url('@/assets/leather.png');
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -72,7 +70,7 @@
   height: 800px;
   border-radius: 5px;
   background-color: #e6e6e6;
-  background-image: url('src/assets/noise.png');
+  background-image: url('@/assets/noise.png');
   background-repeat: repeat;
   color: hsl(0, 0%, 70%) !important;
   background-color: hsl(0, 0%, 90%);
@@ -104,7 +102,7 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin: 0 auto;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .product-description {
@@ -125,7 +123,7 @@
   font-weight: bold;
   color: hsl(0, 0%, 60%) !important;
   background-color: hsl(0, 0%, 90%);
-  background-image: url('src/assets/noise.png');
+  background-image: url('@/assets/noise.png');
   border-top: none;
   padding-right: 1.2em;
   padding-left: 0.8em;  
@@ -144,5 +142,29 @@
               rgba(0, 0, 0, 0.2) 0 0.5em 5px; /* drop shadow */
 }
 
+/* Media query for screen widths 1000px or less */
+@media (max-width: 1000px) {
+  .product-card {
+    width: 45%; /* Adjust the width to fit two cards per row */
+    margin-bottom: 20px; /* Add some margin to separate rows */
+  }
 
+  .product-box {
+    justify-content: space-around; /* Adjust spacing between the cards */
+  }
+}
+
+/* Media query for screen widths 500px or less */
+@media (max-width: 768px) {
+  .product-card {
+    width: 90%; /* Adjust the width to fit one card per row */
+    margin-bottom: 20px; /* Add some margin to separate rows */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .product-box {
+    justify-content: center; /* Center the cards */
+  }
+}
 </style>

@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <MiddleContainer/>
+    <!-- <MiddleContainer/> -->
   </div>
 </template>
 
@@ -31,7 +31,7 @@
   import Frisk from '../components/Frisk.vue'
   import MiddleContainer from '../components/MiddleContainer.vue'
   import { ref } from 'vue'
-  import { useStore } from '../stores/store.ts'
+  import { useStore } from '../stores/store'
   const store = useStore()
   let flavorColor = ref('#00108c')
   let tabletColor = ref('#e6e6e6')
@@ -44,16 +44,14 @@
 </script>
 
 <style scoped>
-@import 'src/assets/font/fonts.css';
+@import '@/assets/font/fonts.css';
 
 *{
   margin:0;
   padding:0;
 }
 .big-container{
-
   width: 100%;
-  height:100vh;
 }
 
 @media(min-width:1300px){
@@ -85,7 +83,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-image:url('src/assets/leather.png');
+  background-image:url('@/assets/leather.png');
   box-shadow:  2px 2px 5px #bebebe,
              -2px -2px 2px #eeeeee;
 }
@@ -94,14 +92,14 @@
   height: 215px;
   border-radius: 15px;
   padding:15px 10px 15px 10px;
-  background-image:url('src/assets/leather.png');
+  background-image:url('@/assets/leather.png');
   box-shadow:  2px 2px 5px #bebebe,
              -2px -2px 2px #eeeeee;
 }
 .face-intro{
   margin-top:15px;
   font-family:'revenge';
-  font-size:22px;
+  font-size:21px;
 }
 .face-label{
   font-family:'kakutto';

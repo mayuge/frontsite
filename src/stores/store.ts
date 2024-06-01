@@ -8,7 +8,7 @@ export const useStore = defineStore('store', () => {
   const tablet = ref({})
   const smile = ref(false)
 
-  function changeColor(getcolor,tabletcolor) {
+  function changeColor(getcolor:string,tabletcolor:string) {
     color.value = getcolor
     animationTime.value = 0.2
     degree.value = -10
